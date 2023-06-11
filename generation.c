@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #include "generation.h"
@@ -33,8 +34,8 @@ int count_creatures(int currentGenMatrix[nrows][ncols]) {
   int i, j;
   int ncreatures = 0;
 
-  for (i = 0; i <= nrows; i++) {
-    for (j = 0; j <= ncols; j++) {
+  for (i = 0; i < nrows; i++) {
+    for (j = 0; j < ncols; j++) {
       if (currentGenMatrix[i][j] == 1) {
         ncreatures++;
       }
@@ -116,8 +117,8 @@ int gen_next_state(int currentGenMatrix[nrows][ncols]) {
     exit(0);
   }
 
-  for (i = 0; i <= nrows; i++)
-    for (j = 0; j <= ncols; j++)
+  for (i = 0; i < nrows; i++)
+    for (j = 0; j < ncols; j++)
       currentGenMatrix[i][j] = nextGenMatrix[i][j];
 
   return currentGenMatrix[nrows][ncols];

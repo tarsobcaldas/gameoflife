@@ -3,8 +3,6 @@
 
 extern int nrows;
 extern int ncols;
-extern int currentGenMtx;
-
 
 void row_line(void);
 int count_live_neighbours(int a[nrows][ncols], int r, int c);
