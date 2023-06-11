@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "generation.h"
 
@@ -52,6 +53,9 @@ int anyCreature(int currentGenMatrix[nrows][ncols]) {
 
 int gen_init_state(int firstGen[nrows][ncols]) {
   int i, j;
+  time_t t;
+  srandom((unsigned) time(&t));
+
   for (i = 0; i < nrows; i++)
     for (j = 0; j < ncols; j++)
       firstGen[i][j] = rand() % 2;
