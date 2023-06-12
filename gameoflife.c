@@ -23,10 +23,10 @@ int main(int argc, char *argv[]) {
         printf("Usage: gameoflife [options]\n");
         printf("Options:\n");
         printf("  -s, --board-size <rows> <columns>\n");
-        printf("  -r, --rows <rows>\n");
-        printf("  -c, --columns <columns>\n");
-        printf("  -m, --max-gen <maxgen>\n");
-        printf("  --help\n");
+        printf("  -r, --rows <rows>                 (default is 5)\n");
+        printf("  -c, --columns <columns>           (default is 5)\n");
+        printf("  -m, --max-gen <maxgen>            (default is 100)\n");
+        printf("  --help");
         exit(0);
       } else if (strcmp(argv[i], "--board-size") == 0 ||
                  strcmp(argv[i], "-s") == 0) {
